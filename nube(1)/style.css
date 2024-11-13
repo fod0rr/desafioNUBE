@@ -1,0 +1,256 @@
+/* style.css */
+/* Definindo as cores principais do site através de variáveis para facilitar a personalização e manutenção */
+:root {
+    --color-primary: #111317; /* Cor de fundo principal */
+    --color-secondary: #1f2125; /* Cor secundária para seções */
+    --color-tertiary: #35373b; /* Cor terciária para contrastar */
+    --color-accent: #f9ac54; /* Cor de destaque, usada em botões */
+    --color-accent-dark: #d79447; /* Versão mais escura da cor de destaque */
+    --color-gray: #d1d5db; /* Cor cinza para textos ou elementos adicionais */
+    --color-white: #ffffff; /* Cor branca para textos e outros elementos */
+}
+
+/* Estilo geral de caixas de layout, centralizando verticalmente o conteúdo */
+.box {
+  display: flex;
+  align-items:center;
+}
+
+/* Estilos gerais para o corpo da página */
+body {
+    background-color: #111317;;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Estilizando o cabeçalho */
+header {
+    background-color: #111317;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    align-items: center;
+  }
+
+/* Estilo para o logo */
+  .logo {
+    color: #f9ac54;
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+
+/* Estilo da seção de programas */
+.program-section {
+  padding: 2rem;
+  background-color: var(--color-tertiary);
+}
+
+/* Estilo para cada programa dentro da seção */
+.program {
+  margin: 2rem 0;
+}
+
+.feature {
+  margin-bottom: 1rem;
+}
+
+.explore-program {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+}
+
+/* Estilo para cada programa dentro da seção */
+.program {
+  background-color: var(--color-secondary);
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+/* Estilos específicos para os textos */
+.program h3 {
+  margin-top: 0;
+}
+
+.program ul {
+  list-style: none;
+  padding: 0;
+}
+
+.program ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Estilo do menu de navegação */
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+/* Estilos dos botões */
+.btn {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    padding: 0.5rem 1rem;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    border-radius: 5px;
+    align-self: flex-end;
+}
+
+/* Seção de destaque inicial */
+.hero-section {
+    text-align: left;
+    padding: 5rem 1rem;
+}
+
+.hero-section h1, .hero-section h2 {
+    margin: 0;
+}
+
+.hero-section button {
+    margin-top: 1rem;
+}
+
+/* Seção de classes */
+.class-section {
+    display: flex;
+    padding: 2rem;
+}
+
+/* Imagens dentro da seção de classes */
+.class-images img {
+    width: 100%;
+    max-width: 300px;
+    margin-right: 1rem;
+}
+
+.class-description {
+    flex: 1;
+}
+
+.program-section {
+    padding: 2rem;
+    background-color: var(--color-tertiary);
+}
+
+.program {
+    margin: 2rem 0;
+}
+
+.feature {
+    margin-bottom: 1rem;
+}
+
+/* Seção de planos de preços */
+.pricing-plan {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+.plan {
+    background-color: var(--color-secondary);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.plan h3 {
+    margin-top: 0;
+}
+
+.plan ul {
+    list-style: none;
+    padding: 0;
+}
+
+.plan ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Ajustes de layout para telas menores */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin-bottom: 1rem;
+    }
+    .class-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .class-images img {
+        margin-bottom: 1rem;
+    }
+    .explore-program {
+    flex-direction: column;
+    align-items: center;
+    }
+    .program {
+    margin-bottom: 1rem;
+    }
+    .pricing-plan {
+        flex-direction: column;
+        align-items: center;
+    }
+    .plan {
+        margin-bottom: 1rem;
+    }
+
+    /* Estilos de animação para suavizar transições */
+  .fade-in {
+    opacity: 0;
+  }
+
+  .animate-on-scroll.animate {
+    transition: all 0.5s ease-in-out;
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+    /* Animação de fade-in */
+  @keyframes fadeInAnimation {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .fade-in-effect {
+    animation: fadeInAnimation 2s forwards;
+  }
+
+    /* Efeito de borda dourada ao passar o mouse sobre os planos */
+  .plan {
+    border: 2px solid transparent; 
+  }
+  
+  
+  .plan:hover {
+    border-color: gold;
+  }
+
+    /* Posiciona um elemento na parte inferior da tela */
+  #bottom {
+    position: absolute;
+    bottom: 0;
+   
+}
+
+}
